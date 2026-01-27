@@ -1,0 +1,24 @@
+<configuration>
+    <appender name="JSON_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <timeZone>UTC</timeZone>
+            <includeMdcKeyName>trace_id</includeMdcKeyName>
+            <includeMdcKeyName>span_id</includeMdcKeyName>
+            <includeStructuredArguments>true</includeStructuredArguments>
+            <includeNonStructuredArguments>false</includeNonStructuredArguments>
+            <includeContext>false</includeContext>
+            <customFields>{"service":"${spring.application.name:-otel-demo}"}</customFields>
+            <fieldNames>
+                <tags>[ignore]</tags>
+            </fieldNames>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="org.apache" level="WARN"/>
+    <logger name="org.springframework.web" level="INFO"/>
+
+    <root level="INFO">
+        <appender-ref ref="JSON_CONSOLE"/>
+    </root>
+</configuration>
