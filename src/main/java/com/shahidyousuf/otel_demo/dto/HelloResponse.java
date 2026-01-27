@@ -1,3 +1,5 @@
 package com.shahidyousuf.otel_demo.dto;
 
-public record HelloResponse(String message, long timestamp, String requestId) { }
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public record HelloResponse(String message, long timestamp, @JsonProperty("request_id") String requestId) { }
