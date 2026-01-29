@@ -36,3 +36,6 @@ out/
 ### VS Code ###
 .vscode/
 .env
+
+# Local agent binary (not tracked)
+opentelemetry-javaagent.jar
