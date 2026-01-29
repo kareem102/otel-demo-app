@@ -2,6 +2,7 @@ package com.shahidyousuf.otel_demo;
 
 import io.micrometer.core.instrument.Clock;
 import io.micrometer.registry.otlp.OtlpConfig;
+import io.micrometer.registry.otlp.AggregationTemporality;
 import io.micrometer.registry.otlp.OtlpMeterRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -72,6 +73,8 @@ public class OtlpRegistryConfig {
 
             @Override
             public Map<String, String> headers() { return headers; }
+
+            // Micrometer 1.14.x: rely on property-based temporality; no explicit override method available here.
         };
 
         log.info("Creating OtlpMeterRegistry bean (url={})", url);
