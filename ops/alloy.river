@@ -1,0 +1,52 @@
+// Preferred: Receive OTLP logs over HTTP from the app and forward to Loki
+otelcol.receiver.otlp "logs" {
+  http {
+    endpoint = "0.0.0.0:4318"
+  }
+  output {
+    logs = [otelcol.processor.batch.logs.input]
+  }
+}
+
+// Previous file tailing path (disabled to avoid missed updates on macOS bind mounts)
+// loki.source.file "app" {
+//   targets = [
+//     {
+//       __path__ = "/var/log/otel-demo/otel-demo.log",
+//     },
+//   ]
+//   forward_to = [loki.process.add_labels.receiver]
+// }
+//
+// loki.process "add_labels" {
+//   stage.static_labels {
+//     values = {
+//       job     = "otel-demo",
+//       service = "otel-demo",
+//     }
+//   }
+//   forward_to = [loki.write.gc.receiver]
+// }
+
+// Batch logs before export
+otelcol.processor.batch "logs" {
+  output {
+    logs = [otelcol.exporter.loki.gc.input]
+  }
+}
+
+// Loki client which handles auth and push
+loki.write "gc" {
+  endpoint {
+    url = env("LOKI_URL")
+    basic_auth {
+      username = env("LOKI_USERNAME")
+      password = env("LOKI_PASSWORD")
+    }
+  }
+}
+
+// Bridge OTEL logs to Loki writer
+otelcol.exporter.loki "gc" {
+  forward_to = [loki.write.gc.receiver]
+}
