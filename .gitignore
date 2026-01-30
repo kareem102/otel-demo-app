@@ -39,3 +39,9 @@ out/
 
 # Local agent binary (not tracked)
 opentelemetry-javaagent.jar
+
+# Local logs directory
+logs/
+
+# macOS Finder files
+.DS_Store
