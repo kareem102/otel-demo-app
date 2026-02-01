@@ -4,6 +4,8 @@ import io.micrometer.core.instrument.Clock;
 import io.micrometer.registry.otlp.OtlpConfig;
 import io.micrometer.registry.otlp.AggregationTemporality;
 import io.micrometer.registry.otlp.OtlpMeterRegistry;
+import io.opentelemetry.api.GlobalOpenTelemetry;
+import io.opentelemetry.api.trace.Tracer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -79,5 +81,11 @@ public class OtlpRegistryConfig {
 
         log.info("Creating OtlpMeterRegistry bean (url={})", url);
         return new OtlpMeterRegistry(config, clock);
+    }
+
+    @Bean
+    @ConditionalOnMissingBean(Tracer.class)
+    Tracer tracer() {
+        return GlobalOpenTelemetry.getTracer("otel-demo", "0.0.1");
     }
 }
