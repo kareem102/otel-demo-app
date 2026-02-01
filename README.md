@@ -461,9 +461,6 @@ This is a demo repository. Feel free to:
 - Submit issues or improvements
 - Use as a reference for your own projects
 
-## 📄 License
-
-[Add your license here]
 
 ## 🙏 Acknowledgments
 
